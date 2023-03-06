@@ -1,4 +1,4 @@
-Feature('buy produts');
+Feature('Buying products on Swag Labs');
 
 const { loginPage, homePage, productPage, cartPage } = inject()
 const name = require('../Utils/name')
