@@ -25,8 +25,7 @@ Snippets and Syntax Highlight for Gherkin (Cucumber)
 Cucumber (Gherkin) Full Support
 
 ## Comandos para rodar a automação dos testes
-npx codeceptjs run --steps (vai executar todos os testes com o final _tests.js)
-npm run test
+npx codeceptjs run
 
 ## Configuração de informações randômicas via NPM
 npm install node-random-name
