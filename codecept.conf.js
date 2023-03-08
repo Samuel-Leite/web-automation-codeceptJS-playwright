@@ -20,8 +20,8 @@ exports.config = {
   teardown: null,
   hooks: [],
   gherkin: {
-    features: './features/*.feature',
-    steps: ['./step_definitions/steps.js']
+    features: './features/web.feature',
+    steps: ['./step_definitions/web_steps.js']
   },
   plugins: {
     screenshotOnFail: {
