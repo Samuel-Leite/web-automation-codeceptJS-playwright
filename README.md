@@ -66,3 +66,6 @@ npm install random-number
 npm install -g allure-commandline --save-dev
 npx codeceptjs run --plugins allure
 npx allure serve output
+
+## Instalação do YAML
+npm i js-yaml
