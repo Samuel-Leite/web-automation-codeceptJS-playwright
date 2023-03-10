@@ -11,8 +11,8 @@ const postalCode = code.getCode()
 // YAML credencial to login
 const fs = require("fs");
 const YAML = require("js-yaml");
-const raw = fs.readFileSync("data.yaml");
-const data = YAML.safeLoad(raw);
+const raw = fs.readFileSync("resource/data.yaml")
+const data = YAML.load(raw)
 
 Before(() => {
     loginPage.loginApp(data.valid_credential.user, data.valid_credential.password)

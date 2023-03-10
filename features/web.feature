@@ -9,7 +9,7 @@ Feature: Online shopping via mobile web
     And fill in all payment details over the internet
     Then the payment is completed successfully over the internet
 
-    Scenario: I'd like to add the Bike Light to the cart online
+  Scenario: I'd like to add the Bike Light to the cart online
     Given that I am logged into Swag Labs over the internet
     When I add the Bike Light to the cart over the internet
     And fill in all payment details over the internet
