@@ -35,18 +35,9 @@ exports.config = {
       require: '@codeceptjs/allure-legacy',
     },
     stepByStepReport: {
-      enabled: true
-    },
-    tryTo: {
-      enabled: true
-    },
-    retryTo: {
-      enabled: true
-    },
-    eachElement: {
-      enabled: true
-    },
-    pauseOnFail: {}
+      enabled: true,
+      screenshotsForAllureReport: true
+    }
   },
   stepTimeout: 0,
   stepTimeoutOverride: [{
