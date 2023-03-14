@@ -4,7 +4,8 @@
   "description": "automacao codeceptjs",
   "main": "index.js",
   "scripts": {
-    "ui": "npx codeceptjs run ./tests/web_test.js"
+    "ui": "npx codeceptjs run ./tests/web_test.js",
+    "uiBdd": "npx codeceptjs run --features"
   },
   "author": "",
   "license": "ISC",
