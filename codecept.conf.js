@@ -1,19 +1,19 @@
 exports.config = {
-  output: "./output",
+  output: './output',
   helpers: {
     Playwright: {
-      url: "https://www.saucedemo.com",
+      url: 'https://www.saucedemo.com',
       show: true,
-      browser: "chromium",
-    },
+      browser: 'chromium'
+    }
   },
   include: {
-    I: "./steps_file.js",
-    loginPage: "./src/Utils/pages/login_page.js",
-    homePage: "./src/Utils/pages/home_page.js",
-    productPage: "./src/Utils/pages/product_page.js",
-    cartPage: "./src/Utils/pages/cart_page.js",
-    qaConfig: "./src/configs/qa.js",
+    I: './steps_file.js',
+    loginPage: './src/Utils/pages/login_page.js',
+    homePage: './src/Utils/pages/home_page.js',
+    productPage: './src/Utils/pages/product_page.js',
+    cartPage: './src/Utils/pages/cart_page.js',
+    qaConfig: './src/configs/qa.js'
   },
   mocha: {},
   bootstrap: null,
@@ -21,36 +21,36 @@ exports.config = {
   teardown: null,
   hooks: [],
   gherkin: {
-    features: "./src/features/web.feature",
-    steps: ["./src/step_definitions/web_steps.js"],
+    features: './src/features/web.feature',
+    steps: ['./src/step_definitions/web_steps.js']
   },
   plugins: {
     screenshotOnFail: {
-      enabled: true,
+      enabled: true
     },
     retryFailedStep: {
-      enabled: true,
+      enabled: true
     },
     allure: {
       enabled: true,
-      require: "@codeceptjs/allure-legacy",
+      require: '@codeceptjs/allure-legacy'
     },
     stepByStepReport: {
       enabled: true,
-      screenshotsForAllureReport: true,
-    },
+      screenshotsForAllureReport: true
+    }
   },
   stepTimeout: 0,
   stepTimeoutOverride: [
     {
-      pattern: "wait.*",
-      timeout: 0,
+      pattern: 'wait.*',
+      timeout: 0
     },
     {
-      pattern: "amOnPage",
-      timeout: 0,
-    },
+      pattern: 'amOnPage',
+      timeout: 0
+    }
   ],
   // tests: './src/tests/*_test.js',
-  name: "web-codeceptjs",
-};
+  name: 'web-codeceptjs'
+}
