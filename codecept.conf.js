@@ -7,7 +7,7 @@ exports.config = {
     Playwright: {
       url: process.env.BASE_URL,
       show: true,
-      browser: 'msedge'
+      browser: 'chromium'
     }
   },
   include: {
