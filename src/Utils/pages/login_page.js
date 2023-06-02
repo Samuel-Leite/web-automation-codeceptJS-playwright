@@ -1,6 +1,9 @@
 /* eslint-disable no-undef */
 const { I } = inject()
 
+/* eslint-disable import/no-extraneous-dependencies */
+require('dotenv').config()
+
 module.exports = {
   fields: {
     userName: '//input[@id = "user-name"]',
@@ -11,11 +14,11 @@ module.exports = {
     enter: '//input[@id = "login-button"]'
   },
 
-  loginApp(userName, password) {
+  loginApp() {
     I.amOnPage('/')
     I.waitForElement(this.fields.userName, 3)
-    I.fillField(this.fields.userName, userName)
-    I.fillField(this.fields.password, password)
+    I.fillField(this.fields.userName, process.env.USER)
+    I.fillField(this.fields.password, process.env.PASSWORD)
     I.click(this.button.enter)
     I.wait(2)
   }

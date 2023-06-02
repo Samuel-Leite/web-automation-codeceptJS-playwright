@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const { loginPage, homePage, productPage, cartPage, qaConfig } = inject()
+const { loginPage, homePage, productPage, cartPage } = inject()
 const name = require('../Utils/variableRandom/randomName')
 const code = require('../Utils/variableRandom/randomNumber')
 
@@ -8,7 +8,7 @@ const lastName = name.getLastName()
 const postalCode = code.getCode()
 
 Given('that I am logged into Swag Labs over the internet', () => {
-  loginPage.loginApp(qaConfig.swagLabs.credencials.valid, qaConfig.swagLabs.passwords.valid)
+  loginPage.loginApp()
   homePage.checkLoginSuccess()
 })
 

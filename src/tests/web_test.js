@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 Feature('Buying products on Swag Labs')
 
-const { loginPage, homePage, productPage, cartPage, qaConfig } = inject()
+const { loginPage, homePage, productPage, cartPage } = inject()
 const name = require('../Utils/variableRandom/randomName')
 const code = require('../Utils/variableRandom/randomNumber')
 
@@ -10,7 +10,7 @@ const lastName = name.getLastName()
 const postalCode = code.getCode()
 
 Before(() => {
-  loginPage.loginApp(qaConfig.swagLabs.credencials.valid, qaConfig.swagLabs.passwords.valid)
+  loginPage.loginApp()
   homePage.checkLoginSuccess()
 })
 

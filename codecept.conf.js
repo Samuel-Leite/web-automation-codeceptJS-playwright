@@ -1,10 +1,13 @@
+/* eslint-disable import/no-extraneous-dependencies */
+require('dotenv').config()
+
 exports.config = {
   output: './output',
   helpers: {
     Playwright: {
-      url: 'https://www.saucedemo.com',
+      url: process.env.BASE_URL,
       show: true,
-      browser: 'chromium'
+      browser: 'msedge'
     }
   },
   include: {
