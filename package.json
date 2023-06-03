@@ -8,6 +8,7 @@
     "precommit": "git add . ",
     "commit": "git cz && node .husky/push.js",
     "ui": "npx codeceptjs run ./src/tests/web_test.js",
+    "uiParallel": "npx codeceptjs run-multiple parallel",
     "uiBdd": "npx codeceptjs run --features",
     "lint": "eslint src --max-warnings=0"
   },
