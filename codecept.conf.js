@@ -8,6 +8,11 @@ exports.config = {
       url: process.env.BASE_URL,
       show: true,
       browser: 'chromium'
+    },
+    ResembleHelper: {
+      require: 'codeceptjs-resemblehelper',
+      baseFolder: './src/Utils/images/base/',
+      diffFolder: './src/Utils/images/diff/'
     }
   },
   include: {

@@ -16,6 +16,8 @@ module.exports = {
 
   loginApp() {
     I.amOnPage('/')
+    I.saveScreenshot('login-v2.png')
+    I.seeVisualDiff('login-v2.png', { tolerance: 2, prepareBaseImage: false })
     I.waitForElement(this.fields.userName, 3)
     I.fillField(this.fields.userName, process.env.USER)
     I.fillField(this.fields.password, process.env.PASSWORD)
