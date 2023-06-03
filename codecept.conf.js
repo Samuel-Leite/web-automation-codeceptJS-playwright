@@ -18,6 +18,24 @@ exports.config = {
       diffFolder: './src/Utils/images/diff/'
     }
   },
+  multiple: {
+    chrome: {
+      browsers: ['chrome']
+    },
+    firefox: {
+      browsers: ['firefox']
+    },
+    safari: {
+      browsers: ['webkit']
+    },
+    parallel: {
+      // Splits tests into chunks
+      // for example: 2 chunks x 6 browsers = 12 threads
+      chunks: 2,
+      // run all tests in each browser:
+      browsers: ['chromium', 'firefox', 'webkit']
+    }
+  },
   include: {
     I: './steps_file.js',
     loginPage: './src/Utils/pages/login_page.js',
