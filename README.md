@@ -54,6 +54,38 @@ npx codeceptjs gt
 
 npx codeceptjs gpo
 
+## Instalação do dotEnv
+
+npm install dotenv --save
+require('dotenv').config()
+
+## Instalação do Visual Testing / Resemble
+
+npm install codeceptjs-resemblehelper --save
+
+{
+   "helpers": {
+     "ResembleHelper" : {
+       "require": "codeceptjs-resemblehelper",
+       "screenshotFolder" : "./tests/output/",
+       "baseFolder": "./tests/screenshots/base/",
+       "diffFolder": "./tests/screenshots/diff/"
+     }
+   }
+}
+
+I.saveScreenshot("image.png");
+I.seeVisualDiff("image.png", {tolerance: 2, prepareBaseImage: false});
+
+## Configuração do setWindowSize
+
+npm i @codeceptjs/configure --save
+
+// in codecept.conf.js
+const { setWindowSize } = require('@codeceptjs/configure');
+
+setWindowSize(1600, 1200);
+
 ## Configuração e os métodos BDD para os cenários
 
 npx codeceptjs gherkin:init

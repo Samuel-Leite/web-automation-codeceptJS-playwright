@@ -1,5 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 require('dotenv').config()
+const { setWindowSize } = require('@codeceptjs/configure')
+
+setWindowSize(process.env.WINDOW_SIZE)
 
 exports.config = {
   output: './output',
