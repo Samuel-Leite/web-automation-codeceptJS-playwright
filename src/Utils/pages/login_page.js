@@ -17,16 +17,16 @@ module.exports = {
 
   windowSize() {
     if (process.env.WINDOW_SIZE === '720 x 1280') {
-      I.saveScreenshot('login-notebook.png')
-      I.seeVisualDiff('login-notebook.png', {
-        tolerance: 2,
+      I.saveScreenshot('login-notebook-erro-falta-dado.png')
+      I.seeVisualDiff('login-notebook-erro-falta-dado.png', {
+        tolerance: 0,
         prepareBaseImage: false,
         needsSameDimension: true
       })
     } else if (process.env.WINDOW_SIZE === '768 x 1024') {
       I.saveScreenshot('login-tablet.png')
       I.seeVisualDiff('login-tablet.png', {
-        tolerance: 2,
+        tolerance: 0,
         prepareBaseImage: false,
         needsSameDimension: true
       })
