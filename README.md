@@ -1,13 +1,13 @@
-# Projeto de automação de testes Web utilizando o framework CodeceptJS
+# Web application automation project using CodeceptJS framework
 
-Projeto de automação para aplicação Web utilizando o framework CodeceptJS, Playwright como helper. A automação utilizou o site Swag Labs aplicando automação com códigos, BDD, testes visuais, variáveis randômicas, execução dos testes de forma paralela com diferentes browsers ao mesmo tempo e entre outras configurações contemplando as boas práticas do mercado.
+Web application automation project using CodeceptJS framework, Playwright as helper. The automation used the Swag Labs website applying automation with codes, BDD, visual tests, random variables, test execution in parallel with different browsers at the same time and other configurations contemplating the good practices of the market.
 
-# Pré-Requisitos:
+# Prerequisites:
 
 VS Code
 Node.js
 
-## Extensões utilizados no projeto
+## Extensions used in the project
 
 BDD Highlighter
 Cucumber (Gherkin) Full Support
@@ -15,31 +15,33 @@ ES6 Mocha Snippets
 ESLint
 Prettier - Code formatter
 
-## Estrutura do Projeto
+## Project Structure
 
 ./.husky
-Pasta com as configurações do husky
+Folder with your husky settings
 
 ./output:
-Evidências da execução dos testes
+Evidence of test execution
 
 ./src/features/:
-Constam os cenários de testes escritos em BDD
+Consists of the test scenarios written in BDD
 
 ./src/step_definitions/:
-Responsável pelos steps versus BDD
+Responsible for the steps versus BDD
 
 ./src/tests/:
-Constam os cenários de testes sem a utilização do BDD
+Constitute the test scenarios without using BDD
 
 ./src/Utils/images:
-Pastas concernentes aos testes visuais
+Folders concerning the visual tests
 
 ./src/Utils/pages:
-Responsável pelos mapeamento das páginas dos testes
+Responsible for the mapping of the test pages
 
 ./src/Utils/variableRandom:
-Responsável por gerar nomes e números randômicos durante a execução dos testes
+Responsible for generating random names and numbers during test execution
 
 .env:
-Pasta contendo as variáveis globais do projeto
+Folder containing the global variables of the project
+
+Translated with www.DeepL.com/Translator (free version)
