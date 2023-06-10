@@ -1,146 +1,47 @@
-# Projeto de automação de testes com CodeceptJS e Playwright
+# Web application automation project using CodeceptJS framework
 
-# Pré-Requisitos:
+Web application automation project using CodeceptJS framework, Playwright as helper. The automation used the Swag Labs website applying automation with codes, BDD, visual tests, random variables, test execution in parallel with different browsers at the same time and other configurations contemplating the good practices of the market.
 
-Java 11 JDK,
+# Prerequisites:
+
 VS Code
+Node.js
 
-## Estrutura do Projeto
-
-./features/web.feature:
-Constam os cenários de testes escritos em BDD para execução
-
-./output:
-Evidências da execução dos testes
-
-./pages:
-Responsável pelos mapeamento das páginas dos testes
-
-./step_definitions/web_steps:
-Responsável pelos steps versus BDD
-
-./test/web_test.js:
-Constam os cenários de testes para execução sem BDD
-
-./Utils/name.js:
-Responsável por gerar nomes randômicos durante a execução dos testes da API
-
-./Utils/code.js:
-Responsável por gerar números randômicos durante a execução dos testes da API
-
-# Observações:
-
-Faça o donwload do template no repositório de código para utilizar no seu projeto em especifico, feito isso, fique a vontande para usufruir dos recursos disponíveis e também customizar de acordo com sua necessidade.
-
-# Comandos utilizados durante a construção da automação de API com CodeceptJS
-
-## Inicialização do projeto:
-
-npm init
-
-## Instalação do codeceptjs na pasta do projeto:
-
-npm i playwright@^1.18 --save
-
-## Inicialização do codeceptjs:
-
-npx codeceptjs init
-
-## Gerar outro método de teste
-
-npx codeceptjs gt
-
-## Gerar Page Object
-
-npx codeceptjs gpo
-
-## Instalação do dotEnv
-
-npm install dotenv --save
-require('dotenv').config()
-
-## Instalação do Visual Testing / Resemble
-
-npm install codeceptjs-resemblehelper --save
-
-{
-   "helpers": {
-     "ResembleHelper" : {
-       "require": "codeceptjs-resemblehelper",
-       "screenshotFolder" : "./tests/output/",
-       "baseFolder": "./tests/screenshots/base/",
-       "diffFolder": "./tests/screenshots/diff/"
-     }
-   }
-}
-
-I.saveScreenshot("image.png");
-I.seeVisualDiff("image.png", {tolerance: 2, prepareBaseImage: false});
-
-## Configuração do setWindowSize
-
-npm i @codeceptjs/configure --save
-
-// in codecept.conf.js
-const { setWindowSize } = require('@codeceptjs/configure');
-
-setWindowSize(1600, 1200);
-
-## Configuração e os métodos BDD para os cenários
-
-npx codeceptjs gherkin:init
-npx codeceptjs gherkin:snippets
-
-## Sugestões de extensões para BDD
+## Extensions used in the project
 
 BDD Highlighter
-Snippets and Syntax Highlight for Gherkin (Cucumber)
 Cucumber (Gherkin) Full Support
+ES6 Mocha Snippets
+ESLint
+Prettier - Code formatter
 
-## Comandos para rodar a automação dos testes
+## Project Structure
 
-npx codeceptjs run
+./.husky
+Folder with your husky settings
 
-## Configuração de informações randômicas via NPM
+./output:
+Evidence of test execution
 
-npm install node-random-name
-npm install random-number
+./src/features/:
+Consists of the test scenarios written in BDD
 
-## Relatorio Allure
+./src/step_definitions/:
+Responsible for the steps versus BDD
 
-npm install @codeceptjs/allure-legacy --save-dev
-npx allure serve output
+./src/tests/:
+Constitute the test scenarios without using BDD
 
-## Instalação do prettier e eslint
+./src/Utils/images:
+Folders concerning the visual tests
 
-npm install prettier
-npm install eslint -D
-npm init @eslint/config
-npm install eslint-config-airbnb-base
-npm install --save-dev eslint-plugin-prettier
-npm install --save-dev eslint-plugin-prettier eslint-config-prettier
-npm install --save-dev lint-staged
+./src/Utils/pages:
+Responsible for the mapping of the test pages
 
-OBS.: Após executar os comandos acima, copiar as pastas: .eslintignore, .eslintrc.js, .prettierignore, .prettierrc e adicionar comandos na pasta package.json:
-"scripts": {
-"lint": "eslint src --max-warnings=0"
-},
-"lint-staged": {
-"src/\*_/_": [
-"npx lint --fix"
-]
-},
+./src/Utils/variableRandom:
+Responsible for generating random names and numbers during test execution
 
-## Instalação do Husky
+.env:
+Folder containing the global variables of the project
 
-npm install husky --save-dev
-npm install -g git-cz
-npm install commitizen -g --force
-npm install --save-dev git-cz
-
-OBS.: Copiar as pastas: .husky, changelog.config.js e adicionar comandos na pasta package.json:
-"scripts": {
-"prepare": "husky install",
-"precommit": "git add . ",
-"commit": "git cz && node .husky/push.js",
-},
+Translated with www.DeepL.com/Translator (free version)
