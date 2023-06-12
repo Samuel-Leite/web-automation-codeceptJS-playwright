@@ -1,4 +1,4 @@
-name: CodeceptJS Tests
+name: CodeceptJS Test
 
 on:
   workflow_dispatch:
