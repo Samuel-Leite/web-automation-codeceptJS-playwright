@@ -1,8 +1,7 @@
+const { devices } = require('playwright')
+
 /* eslint-disable import/no-extraneous-dependencies */
 require('dotenv').config()
-const { setWindowSize } = require('@codeceptjs/configure')
-
-setWindowSize(process.env.WINDOW_SIZE)
 
 exports.config = {
   output: './output',
@@ -10,7 +9,8 @@ exports.config = {
     Playwright: {
       url: process.env.BASE_URL,
       show: true,
-      browser: 'chromium'
+      // browser: 'chromium',
+      emulate: devices[process.env.DEVICE]
     },
     ResembleHelper: {
       require: 'codeceptjs-resemblehelper',

@@ -16,14 +16,14 @@ module.exports = {
   },
 
   windowSize() {
-    if (process.env.WINDOW_SIZE === '720 x 1280') {
-      I.saveScreenshot('login-notebook-erro-falta-dado.png')
-      I.seeVisualDiff('login-notebook-erro-falta-dado.png', {
+    if (process.env.DEVICE === 'Desktop Chrome HiDPI') {
+      I.saveScreenshot('login-desktop-erro-falta-dado.png')
+      I.seeVisualDiff('login-desktop-erro-falta-dado.png', {
         tolerance: 0,
         prepareBaseImage: false,
         needsSameDimension: true
       })
-    } else if (process.env.WINDOW_SIZE === '768 x 1024') {
+    } else if (process.env.DEVICE === 'iPad Mini') {
       I.saveScreenshot('login-tablet.png')
       I.seeVisualDiff('login-tablet.png', {
         tolerance: 0,
