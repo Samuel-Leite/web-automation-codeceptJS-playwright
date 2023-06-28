@@ -26,7 +26,7 @@ module.exports = {
     } else if (process.env.DEVICE === 'iPad Mini') {
       I.saveScreenshot('login-tablet.png')
       I.seeVisualDiff('login-tablet.png', {
-        tolerance: 1,
+        tolerance: 0,
         prepareBaseImage: false,
         needsSameDimension: true
       })

@@ -7,13 +7,13 @@
     "prepare": "husky install",
     "precommit": "git add . ",
     "commit": "git cz && node .husky/push.js",
-    "ui": "npx codeceptjs run ./src/tests/web_test.js",
+    "ui": "npx codeceptjs run ./tests/steps/web_test.js",
     "uiParallel": "npx codeceptjs run-multiple parallel",
     "uiBdd": "npx codeceptjs run --features",
-    "lint": "eslint src --max-warnings=0"
+    "lint": "eslint --max-warnings=0"
   },
   "lint-staged": {
-    "src/**/*": [
+    "./**/*": [
       "npx lint --fix"
     ]
   },
