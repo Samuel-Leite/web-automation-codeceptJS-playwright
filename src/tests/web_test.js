@@ -2,8 +2,8 @@
 Feature('Buying products on Swag Labs')
 
 const { loginPage, homePage, productPage, cartPage } = inject()
-const name = require('../Utils/variableRandom/randomName')
-const code = require('../Utils/variableRandom/randomNumber')
+const name = require('../../helpers/utils')
+const code = require('../../helpers/utils')
 
 const firstName = name.getFirstName()
 const lastName = name.getLastName()

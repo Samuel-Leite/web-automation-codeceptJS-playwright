@@ -23,8 +23,7 @@ exports.config = {
     loginPage: './src/Utils/pages/login_page.js',
     homePage: './src/Utils/pages/home_page.js',
     productPage: './src/Utils/pages/product_page.js',
-    cartPage: './src/Utils/pages/cart_page.js',
-    qaConfig: './src/configs/qa.js'
+    cartPage: './src/Utils/pages/cart_page.js'
   },
   mocha: {},
   bootstrap: null,
