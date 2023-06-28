@@ -9,40 +9,21 @@ exports.config = {
     Playwright: {
       url: process.env.BASE_URL,
       show: true,
-      // browser: 'chromium',
+      browser: process.env.BROWSER,
       emulate: devices[process.env.DEVICE]
     },
     ResembleHelper: {
       require: 'codeceptjs-resemblehelper',
-      baseFolder: './src/Utils/images/base/',
-      diffFolder: './src/Utils/images/diff/'
-    }
-  },
-  multiple: {
-    chrome: {
-      browsers: ['chrome']
-    },
-    firefox: {
-      browsers: ['firefox']
-    },
-    safari: {
-      browsers: ['webkit']
-    },
-    parallel: {
-      // Splits tests into chunks
-      // for example: 2 chunks x 6 browsers = 12 threads
-      chunks: 2,
-      // run all tests in each browser:
-      browsers: ['chromium', 'firefox', 'webkit']
+      baseFolder: './helpers/resemble/base/',
+      diffFolder: './helpers/resemble/diff/'
     }
   },
   include: {
     I: './steps_file.js',
-    loginPage: './src/Utils/pages/login_page.js',
-    homePage: './src/Utils/pages/home_page.js',
-    productPage: './src/Utils/pages/product_page.js',
-    cartPage: './src/Utils/pages/cart_page.js',
-    qaConfig: './src/configs/qa.js'
+    loginPage: './tests/pages/login_page.js',
+    homePage: './tests/pages/home_page.js',
+    productPage: './tests/pages/product_page.js',
+    cartPage: './tests/pages/cart_page.js'
   },
   mocha: {},
   bootstrap: null,
@@ -50,8 +31,8 @@ exports.config = {
   teardown: null,
   hooks: [],
   gherkin: {
-    features: './src/features/web.feature',
-    steps: ['./src/step_definitions/web_steps.js']
+    features: './tests/features/web.feature',
+    steps: ['./tests/step_definitions/web_steps.js']
   },
   plugins: {
     screenshotOnFail: {
@@ -80,6 +61,6 @@ exports.config = {
       timeout: 0
     }
   ],
-  // tests: './src/tests/*_test.js',
+  // tests: './tests/steps/web_test.js',
   name: 'web-codeceptjs'
 }

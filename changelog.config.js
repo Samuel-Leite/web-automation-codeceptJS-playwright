@@ -1,6 +1,6 @@
 const { readdirSync } = require('fs')
 
-const allScopes = readdirSync('./src', { withFileTypes: true })
+const allScopes = readdirSync('./', { withFileTypes: true })
   .filter((dirent) => dirent.isDirectory())
   .map((dirent) => dirent.name)
 
