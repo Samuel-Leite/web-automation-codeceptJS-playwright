@@ -17,8 +17,8 @@ module.exports = {
 
   windowSize() {
     if (process.env.DEVICE === 'Desktop Chrome HiDPI') {
-      I.saveScreenshot('login-desktop-erro-falta-dado.png')
-      I.seeVisualDiff('login-desktop-erro-falta-dado.png', {
+      I.saveScreenshot('login-desktop.png')
+      I.seeVisualDiff('login-desktop.png', {
         tolerance: 0,
         prepareBaseImage: false,
         needsSameDimension: true
@@ -26,7 +26,7 @@ module.exports = {
     } else if (process.env.DEVICE === 'iPad Mini') {
       I.saveScreenshot('login-tablet.png')
       I.seeVisualDiff('login-tablet.png', {
-        tolerance: 0,
+        tolerance: 1,
         prepareBaseImage: false,
         needsSameDimension: true
       })

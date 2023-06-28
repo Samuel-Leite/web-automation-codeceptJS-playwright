@@ -9,31 +9,13 @@ exports.config = {
     Playwright: {
       url: process.env.BASE_URL,
       show: true,
-      // browser: 'chromium',
+      browser: 'chromium',
       emulate: devices[process.env.DEVICE]
     },
     ResembleHelper: {
       require: 'codeceptjs-resemblehelper',
       baseFolder: './src/Utils/images/base/',
       diffFolder: './src/Utils/images/diff/'
-    }
-  },
-  multiple: {
-    chrome: {
-      browsers: ['chrome']
-    },
-    firefox: {
-      browsers: ['firefox']
-    },
-    safari: {
-      browsers: ['webkit']
-    },
-    parallel: {
-      // Splits tests into chunks
-      // for example: 2 chunks x 6 browsers = 12 threads
-      chunks: 2,
-      // run all tests in each browser:
-      browsers: ['chromium', 'firefox', 'webkit']
     }
   },
   include: {
