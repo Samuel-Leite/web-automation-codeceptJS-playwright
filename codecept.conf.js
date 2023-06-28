@@ -9,7 +9,7 @@ exports.config = {
     Playwright: {
       url: process.env.BASE_URL,
       show: true,
-      browser: 'chromium',
+      browser: process.env.BROWSER,
       emulate: devices[process.env.DEVICE]
     },
     ResembleHelper: {
