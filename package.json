@@ -26,7 +26,8 @@
     "node-random-name": "^1.0.1",
     "playwright": "1.18",
     "prettier": "^2.8.7",
-    "random-number": "^0.0.9"
+    "random-number": "^0.0.9",
+    "rimraf": "^5.0.1"
   },
   "devDependencies": {
     "@codeceptjs/allure-legacy": "^1.0.2",

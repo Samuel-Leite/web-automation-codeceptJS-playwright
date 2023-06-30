@@ -16,6 +16,9 @@ exports.config = {
       require: 'codeceptjs-resemblehelper',
       baseFolder: './helpers/resemble/base/',
       diffFolder: './helpers/resemble/diff/'
+    },
+    Hooks: {
+      require: './helpers/Hooks.js'
     }
   },
   include: {
