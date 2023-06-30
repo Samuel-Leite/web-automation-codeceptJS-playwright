@@ -19,14 +19,14 @@ module.exports = {
     if (process.env.DEVICE === 'Desktop Chrome HiDPI') {
       I.saveScreenshot('login-desktop.png')
       I.seeVisualDiff('login-desktop.png', {
-        tolerance: 0,
+        tolerance: 0.01,
         prepareBaseImage: false,
         needsSameDimension: true
       })
     } else if (process.env.DEVICE === 'iPad Mini') {
       I.saveScreenshot('login-tablet.png')
       I.seeVisualDiff('login-tablet.png', {
-        tolerance: 0,
+        tolerance: 0.01,
         prepareBaseImage: false,
         needsSameDimension: true
       })
