@@ -35,7 +35,7 @@ module.exports = {
 
   loginApp() {
     I.amOnPage('/')
-    this.windowSize()
+    // this.windowSize()
     I.waitForElement(this.fields.userName, 3)
     I.fillField(this.fields.userName, process.env.USER)
     I.fillField(this.fields.password, process.env.PASSWORD)
