@@ -7,6 +7,7 @@
     "prepare": "husky install",
     "precommit": "git add . ",
     "commit": "git cz && node .husky/push.js",
+    "firefox": "set BROWSER=firefox&& npx codeceptjs run",
     "ui": "npx codeceptjs run ./tests/steps/web_test.js",
     "uiParallel": "npx codeceptjs run-multiple parallel",
     "uiBdd": "npx codeceptjs run --features",
